@@ -1,0 +1,3 @@
+--keys in https://raw.githubusercontent.com/zxmp/surm/main/keys
+_G.key="";
+loadstring(game:HttpGet('https://raw.githubusercontent.com/zxmp/surm/main/main'))();
