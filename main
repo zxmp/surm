@@ -1,0 +1,191 @@
+local function loadgui(key, gam)
+	if key == "Y2wbFe545N8b4p#p$+A@6CJS7DGDr*G^CfxPeK@9uE4cyZhNYC9uMUT6!Rr#mz+x9A*^WWG3sPkk_Q7Y$+UrtvvUTZ7*s-Ta" then	
+		if not syn_decompile then --if is not synapse
+			if not KRNL_LOADED then -- if is not krnl
+
+				local NotificationBindable = Instance.new("BindableFunction")
+				NotificationBindable.OnInvoke = function(txt)
+					if txt == "Get KRNL" then
+						setclipboard("https://krnl.ca")
+						game:GetService("StarterGui"):SetCore("SendNotification", {
+							Title = "krnl Download!";
+							Text = "The download link has been copied to your clipboard, Paste it in your browser for download.";
+						})
+					end
+				end;
+
+				game.StarterGui:SetCore("SendNotification",  {
+					Title = "Surm | Exploit Support";
+					Text = "Since you are not using synapse, I recommend you use krnl. Would you like to copy download link?";
+					Icon = "";
+					Duration = 15;
+					Button1 = "Get krnl";
+					Callback = NotificationBindable;
+				})
+
+			end
+		end
+		
+		if gam == "tapping" then
+			local ui = Instance.new("ScreenGui")
+			local main = Instance.new("Frame")
+			local Stitle = Instance.new("TextLabel")
+			local Utitle = Instance.new("TextLabel")
+			local Rtitle = Instance.new("TextLabel")
+			local Mtitle = Instance.new("TextLabel")
+			local exit = Instance.new("TextButton")
+			local autotap = Instance.new("TextButton")
+			local uic1 = Instance.new("UICorner")
+			local autoreb = Instance.new("TextButton")
+			local uic2 = Instance.new("UICorner")
+
+			_G.autotap = false;
+			_G.autoreb = false;
+
+			ui.Name = "ui"
+			ui.Parent = game:WaitForChild("CoreGui")
+			ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+			main.Name = "main"
+			main.Parent = ui
+			main.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+			main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			main.BorderSizePixel = 0
+			main.Position = UDim2.new(0.132121325, 0, 0.682775736, 0)
+			main.Size = UDim2.new(0, 349, 0, 206)
+
+			Stitle.Name = "Stitle"
+			Stitle.Parent = main
+			Stitle.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+			Stitle.BackgroundTransparency = 1.000
+			Stitle.BorderSizePixel = 0
+			Stitle.Position = UDim2.new(0.0229226351, 0, 0.0388349518, 0)
+			Stitle.Size = UDim2.new(0, 28, 0, 30)
+			Stitle.Font = Enum.Font.Oswald
+			Stitle.Text = "S"
+			Stitle.TextColor3 = Color3.fromRGB(255, 110, 110)
+			Stitle.TextSize = 28.000
+
+			Utitle.Name = "Utitle"
+			Utitle.Parent = Stitle
+			Utitle.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+			Utitle.BackgroundTransparency = 1.000
+			Utitle.BorderSizePixel = 0
+			Utitle.Position = UDim2.new(0.628000021, 0, 0.0390000008, 0)
+			Utitle.Size = UDim2.new(0, 28, 0, 30)
+			Utitle.Font = Enum.Font.Oswald
+			Utitle.Text = "U"
+			Utitle.TextColor3 = Color3.fromRGB(189, 147, 249)
+			Utitle.TextSize = 28.000
+
+			Rtitle.Name = "Rtitle"
+			Rtitle.Parent = Stitle
+			Rtitle.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+			Rtitle.BackgroundTransparency = 1.000
+			Rtitle.BorderSizePixel = 0
+			Rtitle.Position = UDim2.new(1.2708571, 0, 0.0390000008, 0)
+			Rtitle.Size = UDim2.new(0, 28, 0, 30)
+			Rtitle.Font = Enum.Font.Oswald
+			Rtitle.Text = "R"
+			Rtitle.TextColor3 = Color3.fromRGB(255, 255, 165)
+			Rtitle.TextSize = 28.000
+
+			Mtitle.Name = "Mtitle"
+			Mtitle.Parent = Stitle
+			Mtitle.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+			Mtitle.BackgroundTransparency = 1.000
+			Mtitle.BorderSizePixel = 0
+			Mtitle.Position = UDim2.new(1.87800002, 0, 0.0390000008, 0)
+			Mtitle.Size = UDim2.new(0, 28, 0, 30)
+			Mtitle.Font = Enum.Font.Oswald
+			Mtitle.Text = "M"
+			Mtitle.TextColor3 = Color3.fromRGB(164, 255, 255)
+			Mtitle.TextSize = 28.000
+
+			exit.Name = "exit"
+			exit.Parent = main
+			exit.BackgroundColor3 = Color3.fromRGB(255, 110, 110)
+			exit.BorderSizePixel = 0
+			exit.Position = UDim2.new(0.927999973, 0, 0, 0)
+			exit.Size = UDim2.new(0, 25, 0, 25)
+			exit.Font = Enum.Font.Oswald
+			exit.Text = "X"
+			exit.TextColor3 = Color3.fromRGB(248, 248, 242)
+			exit.TextSize = 24.000
+			exit.MouseButton1Click:Connect(function()
+				_G.autotap = false;
+				_G.autoreb = false;
+				game.CoreGui.ui:Destroy();
+			end)
+
+			autotap.Name = "autotap"
+			autotap.Parent = main
+			autotap.BackgroundColor3 = Color3.fromRGB(68, 71, 90)
+			autotap.BorderSizePixel = 0
+			autotap.Position = UDim2.new(0.0482690632, 0, 0.235753477, 0)
+			autotap.Size = UDim2.new(0, 97, 0, 28)
+			autotap.Font = Enum.Font.Oswald
+			autotap.Text = "Auto Tap"
+			autotap.TextColor3 = Color3.fromRGB(248, 248, 242)
+			autotap.TextSize = 20.000
+			autotap.MouseButton1Click:Connect(function()
+				if _G.autotap == false then
+					_G.autotap = true;
+					autotap.TextColor3 = Color3.fromRGB(110, 255, 110)
+				else
+					_G.autotap = false;
+					autotap.TextColor3 = Color3.fromRGB(255, 110, 110)
+				end;
+			end)
+
+			uic1.Name = "uic1"
+			uic1.Parent = autotap
+
+			autoreb.Name = "autoreb"
+			autoreb.Parent = main
+			autoreb.BackgroundColor3 = Color3.fromRGB(68, 71, 90)
+			autoreb.BorderSizePixel = 0
+			autoreb.Position = UDim2.new(0.360589981, 0, 0.235753477, 0)
+			autoreb.Size = UDim2.new(0, 97, 0, 28)
+			autoreb.Font = Enum.Font.Oswald
+			autoreb.Text = "Auto Reb"
+			autoreb.TextColor3 = Color3.fromRGB(248, 248, 242)
+			autoreb.TextSize = 20.000
+			autoreb.MouseButton1Click:Connect(function()
+				if _G.autoreb == false then
+					_G.autoreb = true;
+					autoreb.TextColor3 = Color3.fromRGB(110, 255, 110)
+				else
+					_G.autoreb = false;
+					autoreb.TextColor3 = Color3.fromRGB(255, 110, 110)
+				end;
+			end)
+
+			uic2.Name = "uic2"
+			uic2.Parent = autoreb
+
+			while wait() do
+				if _G.autotap == true then
+					game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+				end
+				if _G.autoreb == true then
+					game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(1)
+				end
+			end
+		end
+	else
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "SURM | Key";
+			Text = "The Key Is Incorrect!";
+		})
+	end
+end
+
+if game.PlaceId == 5535087806 then
+	loadgui(_G.key, "tapping")
+else
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "SURM | Game";
+		Text = "The Game Is Not Support!";
+	})
+end
